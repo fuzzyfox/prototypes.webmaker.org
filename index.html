@@ -1,27 +1,50 @@
+---
+---
 <!doctype html>
 <html lang="en" ng-app="styleguide">
 <head>
+  <meta charset="utf-8">
+  <title>Webmaker Prototypes</title>
   <link href="https://s3-us-west-2.amazonaws.com/makerstrap/makerstrap.complete.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #E3EAEE;
+    }
+
+    .thumbnail {
+      padding: 30px;
+      word-wrap: break-word;
+    }
+  </style>
 </head>
-<body>
+<body class="text-center">
 
   <div class="jumbotron">
     <div class="container">
       <h1>Webmaker Prototypes</h1>
-      <p>Say something cool here...</p>
+      <p>A list of all the prototypes we've built for Webmaker</p>
     </div>
   </div>
 
   <div class="content">
     <div class="container">
-      <h1>Featured Prototypes</h1>
+      <div class="alert alert-info">
+        <span class="fa fa-exclamation-circle"></span>
+        <strong>Warning!</strong>
+        These prototypes may have rough edges, unfinished spots, and unexpected bugs.
+        If you find something that doesn't work, try contacting the author(s).
+      </div>
+
+    {% for prototype in site.data.prototypes %}
+      <div class="thumbnail">
+        <h2><a href="{{ prototype.url }}">{{ prototype.name }}</a></h2>
+        <p>{{ prototype.description }}</p>
+        <p>Link: <a href="{{ prototype.url }}">{{ prototype.url }}</a></p>
+        <p>Code: <a href="{{ prototype.repository }}">{{ prototype.repository }}</a></p>
+        <p>Author: <a href="{{ prototype.author_link }}">{{ prototype.author }}</a></p>
+      </div>
+    {% endfor %}
     </div>
   </div>
-
-  <footer class="wm-footer">
-    <div class="container">
-      <p>Footer...</p>
-    </div>
-  </footer>
 </body>
 </html>
