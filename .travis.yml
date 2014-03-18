@@ -1,0 +1,14 @@
+language: ruby
+rvm:
+- 2.1.0
+install: bundle install
+script: bundle exec jekyll build
+after_success:
+- if [[ "$TRAVIS_PULL_REQUEST" != "false" ]]; then echo "Deployments are only done for branches. "; exit 0; fi
+- if [[ "$TRAVIS_BRANCH" != "gh-pages" ]]; then echo "Deployments are only done for the gh-pages branch. "; exit 0; fi
+- echo "Deploying commit $TRAVIS_COMMIT"
+- bundle exec s3_website push --headless
+env:
+  global:
+  - secure: e2VibOrHIa2SzY9M3dTrbWReYwIwBiUvpMnFEsHYR9M8XzDp6FZMfJcpiBdFrHtCK+qXDlVxKYvg1KC0Tf6bqRq7KhjBSeoVxpvvHIK1ZL87xlGbKKdIcm82cUVoaVXBu+B8S5xnvGzRts7f0nXsBzuPB/vNJIizbbTN5wz1nJo=
+  - secure: RxCbzLdFntC0BGZQ5aI0zrGIXF4VHIE5RQXljP8eOcS+ebZn5wUo+4QjVmqRCaSMZP1dDRQQFwMWVkmU6ZoOKZcqzLYZqhX8M4noyQ2Jb8e1nPdrxSFsqfyhcLK63YssxHHe8ug7rAGUE6MvusrEyPByMeZzxLk1PcJ8z60IGA8=
