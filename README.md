@@ -7,4 +7,5 @@ A list of all the prototypes we've built for Webmaker
 
 1. Fork this repository
 2. Add your prototype's data to _data/prototypes.yml, following the structure of other prototypes listed there
-3. Submit a pull request
+3. Add your prototype's redirect, which you defined in _data/prototypes.yml, to `s3_website.yaml`
+4. Submit a pull request
