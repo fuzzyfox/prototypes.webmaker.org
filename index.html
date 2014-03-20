@@ -38,11 +38,10 @@
 
     {% for prototype in site.data.prototypes %}
       <div class="thumbnail">
-        <h2><a href="{{ prototype.url }}">{{ prototype.name }}</a></h2>
+        <h2><a href="{{ prototype.slug }}">{{ prototype.name }}</a></h2>
         <p>{{ prototype.description }}</p>
-        <p>Link: <a href="{{ prototype.url }}">{{ prototype.url }}</a></p>
+        <p>Link: <a href="{{ prototype.slug }}">http://prototypes.webmaker.org/{{ prototype.slug }}</a></p>
         <p>Code: <a href="{{ prototype.repository }}">{{ prototype.repository }}</a></p>
-        <p>Author: <a href="{{ prototype.author_link }}">{{ prototype.author }}</a></p>
       </div>
     {% endfor %}
     </div>

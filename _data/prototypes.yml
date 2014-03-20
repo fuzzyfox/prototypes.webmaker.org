@@ -1,13 +1,9 @@
 - name: Webmaker Training
-  author: P2PU & TeachTheWeb
-  author_link: https://plus.google.com/u/0/communities/106022863174952221205/stream/4723a453-f65d-49c4-a44e-cae2b9dbada1
+  slug: training
   repository: https://github.com/p2pu/school-of-webmaking
-  url: http://training.mofostaging.net/
   description: An online course teaching mentors how to teach the web.
 
 - name: Web Literacy Mapper
-  author: Atul Varma
-  author_link: http://twitter.com/toolness
+  slug: weblitmapper
   repository: https://github.com/toolness/weblitmapper
-  url: https://weblitmapper.mofostaging.net/
   description: A gallery of resources tagged with Web Literacy Map metadata on Webmaker.org.
