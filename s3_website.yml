@@ -3,7 +3,11 @@ s3_secret: <%= ENV['AWS_SECRET_KEY'] %>
 s3_bucket: prototypes.webmaker.org
 
 exclude_from_upload:
-  - CNAME
-  - Gemfile
-  - Gemfile.lock
-  - README.md
+- CNAME
+- Gemfile
+- Gemfile.lock
+- README.md
+
+redirects:
+  training: http://training.prototypes.webmaker.org/
+  weblitmapper: https://weblitmapper.herokuapp.com/
