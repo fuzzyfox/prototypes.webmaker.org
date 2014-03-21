@@ -1,4 +1,4 @@
-# prototypes.webmaker.org
+# Webmaker Prototypes
 [![Build Status](https://travis-ci.org/mozilla/prototypes.webmaker.org.png)](https://travis-ci.org/mozilla/prototypes.webmaker.org)
 
 A list of all the prototypes we've built for Webmaker
